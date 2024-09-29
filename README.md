@@ -1,3 +1,4 @@
+<!-- <<<<<<< HEAD
 Vespera AWS
 
 Steps of setup (common for everyone):
@@ -19,4 +20,10 @@ Steps of setup (common for everyone):
 6. For first time, use:
    git push --set-upstream yourName
    Other than that simply use:
-   git push
+   git push -->
+
+=======
+
+# Home
+
+> > > > > > > 666f5c9d53ccbddf29669894d940496a5a0c10be

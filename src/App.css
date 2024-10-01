@@ -170,13 +170,12 @@
   flex-direction: column;
   align-items: center;
 
-  /* Ensures the container has a height */
-  background-image: url("../public/assets/Frame-41.png"); /* Adjust the path based on your folder structure */
+  background-image: url("../public/assets/Frame-41.png");
 
   background-position-x: 0px;
   background-position-y: -700px;
   background-repeat: no-repeat;
-  background-size: 150% auto contain; /* Adjust to cover or auto based on your needs */
+  background-size: 150% auto contain;
   padding: 20px;
 }
 
@@ -240,7 +239,7 @@
   background-color: #1b1b1b;
   color: #fff;
   text-align: left;
-  padding: 0 28px; /* Removed top/bottom padding initially to prevent visual gaps */
+  padding: 0 28px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -248,7 +247,7 @@
 }
 
 .accordion-item.open .hidden-box {
-  max-height: 200px; /* Set max height large enough to accommodate content */
+  max-height: 200px;
   opacity: 0.75;
   padding: 16px 126px 16px 28px;
 }
@@ -260,9 +259,9 @@
 
 .faq-logo {
   position: absolute;
-  top: 10px; /* Adjust the position as needed */
-  left: 10px; /* Adjust the position as needed */
-  width: 100px; /* Adjust the size as needed */
+  top: 10px;
+  left: 10px;
+  width: 100px;
   height: auto;
 }
 
@@ -275,12 +274,12 @@
 footer {
   position: relative;
   width: 100%;
-  height: 400px; /* Adjusted height for a better fit with large circle */
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   background-color: #181818;
-  overflow: hidden; /* To prevent the circle from overflowing the container */
+  overflow: hidden;
 }
 
 .footer-text {
@@ -295,13 +294,12 @@ footer {
 
 /* Applying styles to the first child paragraph inside the footer */
 footer p:first-child {
-  /* Example: Red text for the first paragraph */
-  font-size: 24px; /* Example: Larger font size for the first paragraph */
+  font-size: 24px;
   font-weight: 500;
   line-height: 30.62px;
 }
 footer p:last-child {
-  font-size: 10px; /* Example: Larger font size for the first paragraph */
+  font-size: 10px;
   font-weight: 300;
   line-height: 12.76px;
 }
@@ -331,12 +329,12 @@ footer p:last-child {
 }
 
 .overlay {
-  background-image: url("../public/assets/Frame-49.png"); /* Adjust the path based on your folder structure */
+  background-image: url("../public/assets/Frame-49.png");
   z-index: 2;
   background-position-x: 605px;
   background-position-y: 0px;
   background-repeat: no-repeat;
-  background-size: 100% auto contain; /* Adjust to cover or auto based on your needs */
+  background-size: 100% auto contain;
   padding: 20px;
 }
 .Speaker-heading {
@@ -361,11 +359,11 @@ footer p:last-child {
   color: #fff;
 
   background-image: url("../public/assets/Frame-49.png"),
-    url("../public/assets/Vector1.png"); /* Adjust the path based on your folder structure */
+    url("../public/assets/Vector1.png");
 
   background-position: 605px -220px, 0px -200px;
   background-repeat: no-repeat, no-repeat;
-  background-size: 100% auto contain, 100% auto contain; /* Adjust to cover or auto based on your needs */
+  background-size: 100% auto contain, 100% auto contain;
   padding: 20px, 20px;
   z-index: -10;
 }
@@ -373,11 +371,11 @@ footer p:last-child {
 .content-box {
   padding: 20px;
   border-radius: 20px;
-  background-color: #151515; /* Light background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  width: 420px; /* Limits the box width */
-  /* Centers the box and adds space */
-  text-align: center; /* Centers the content */
+  background-color: #151515;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 420px;
+
+  text-align: center;
   height: 240px;
   border: 0.5px solid var(--Not-BG, rgba(45, 45, 45, 1));
 }
@@ -391,7 +389,7 @@ footer p:last-child {
   line-height: 45.94px;
   letter-spacing: -0.01em;
 
-  color: #fff; /* Darker heading color */
+  color: #fff;
 }
 
 .content-box p {
@@ -411,7 +409,7 @@ footer p:last-child {
   width: 150px;
   height: 150px;
   background-color: white;
-  border-radius: 50%; /* Makes it circular */
+  border-radius: 50%;
 
   /* clip-path: polygon(
     48% 0%,
@@ -433,7 +431,6 @@ footer p:last-child {
     0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4),
     0 0 80px rgba(255, 255, 255, 0.2);
 
-  /* Optional: if you want some animation for the glow */
   animation: pulse-glow 2s infinite ease-in-out;
 }
 

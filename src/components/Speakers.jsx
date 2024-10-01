@@ -78,8 +78,8 @@ function BoxForDean({ heading, para, x = "0px", y = "0px" }) {
     <div
       className="content-box"
       style={{
-        position: "relative", // Set the position to absolute
-        left: x, // Use left for x positioning
+        position: "relative",
+        left: x,
         top: y,
       }}
     >
@@ -96,9 +96,9 @@ const GlowingStar = ({ size = 50, x = "0px", y = "0px", rotate = 0 }) => {
       style={{
         width: size,
         height: size,
-        position: "relative", // Set the position to absolute
-        left: x, // Use left for x positioning
-        top: y, // Use top for y positioning
+        position: "relative",
+        left: x,
+        top: y,
         transform: `rotate(${rotate}deg)`,
       }}
     ></div>

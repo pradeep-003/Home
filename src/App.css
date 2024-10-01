@@ -1,4 +1,5 @@
 /* colors --  #6356FE  #2D2D2D #181818 #FFF */
+/* 56 36 24 20 18 */
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
@@ -29,23 +30,466 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 24px 0 8px 5%;
   align-items: center;
 }
 
 .header > .container > .logo {
-  width: 56px;
-  /* height: px; */
+  width: 82.95px;
+  top: 30px;
+  height: 60px;
+  left: 70px;
+}
+.header-main {
+  width: 654px;
+  top: 42px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .header > .container > nav > main > a {
   color: #fff;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
   margin-right: 24px;
-
+  line-height: 30.62px;
+  letter-spacing: -1%;
+  opacity: 75%;
+  padding: 8px;
+  margin: 4px;
   &:hover {
-    color: #6356fe;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    animation: riseUp 0.5s forwards ease-out;
+  }
+  animation: riseDown 0.25s forwards ease-out;
+}
+@keyframes riseUp {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.75;
+  }
+  20% {
+    transform: translateY(-4px);
+    opacity: 0.5;
+  }
+  40% {
+    transform: translateY(-4px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(4px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(2px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
+
+@keyframes riseDown {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(2px);
+    opacity: 0.5;
+  }
+  40% {
+    transform: translateY(4px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-4px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(-4px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0.75;
+  }
+}
+
+/* About */
+.about {
+  width: 100%;
+  height: 100vh;
+  background-color: #181818;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.about-container {
+  width: 437px;
+  height: fit-content;
+  background-color: #2d2d2d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 36px;
+  border-radius: 18px 0 0 18px;
+  align-items: center;
+  h1 {
+    font-size: 36px;
+    align-self: flex-end;
+  }
+  p {
+    font-size: medium;
+    text-align: end;
+    right: 0%;
+  }
+}
+
+.stars {
+  height: 100%;
+  width: 100%;
+}
+
+/*  Faq */
+
+.faq-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #181818;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Ensures the container has a height */
+  background-image: url("../public/assets/Frame-41.png"); /* Adjust the path based on your folder structure */
+
+  background-position-x: 0px;
+  background-position-y: -700px;
+  background-repeat: no-repeat;
+  background-size: 150% auto contain; /* Adjust to cover or auto based on your needs */
+  padding: 20px;
+}
+
+.faq-container h1 {
+  color: #fff;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 71.46px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+/* Accordion Styling */
+.accordion-item {
+  width: 1080px;
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Text and Icon container */
+.text-imgContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  cursor: pointer;
+  background-color: #131313;
+  transition: background-color 0.3s ease;
+}
+
+.text-imgContainer:hover {
+  background-color: #2d2d2d;
+}
+
+.text-imgContainer p {
+  font-size: 24px;
+  color: #fff;
+  margin: 0;
+}
+
+/* Icon for Accordion */
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* Hidden box for answer text */
+.hidden-box {
+  opacity: 0;
+  max-height: 0;
+  width: 100%;
+  font-size: 20px;
+  background-color: #1b1b1b;
+  color: #fff;
+  text-align: left;
+  padding: 0 28px; /* Removed top/bottom padding initially to prevent visual gaps */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-item.open .hidden-box {
+  max-height: 200px; /* Set max height large enough to accommodate content */
+  opacity: 0.75;
+  padding: 16px 126px 16px 28px;
+}
+
+.faq-container {
+  position: relative;
+  padding: 20px;
+}
+
+.faq-logo {
+  position: absolute;
+  top: 10px; /* Adjust the position as needed */
+  left: 10px; /* Adjust the position as needed */
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+}
+
+/* Footer  */
+
+/* Footer.css */
+
+/* Footer.css */
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjusted height for a better fit with large circle */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #181818;
+  overflow: hidden; /* To prevent the circle from overflowing the container */
+}
+
+.footer-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+
+  padding: 20px 0;
+}
+
+/* Applying styles to the first child paragraph inside the footer */
+footer p:first-child {
+  /* Example: Red text for the first paragraph */
+  font-size: 24px; /* Example: Larger font size for the first paragraph */
+  font-weight: 500;
+  line-height: 30.62px;
+}
+footer p:last-child {
+  font-size: 10px; /* Example: Larger font size for the first paragraph */
+  font-weight: 300;
+  line-height: 12.76px;
+}
+
+.footer-text span {
+  color: red;
+}
+
+/* Speakers */
+
+@font-face {
+  font-family: saol;
+  src: url(../public/assets/foglihtenno07.regular.ttf);
+}
+
+.speaker-header {
+  width: 100%;
+  height: fit-content;
+  background-color: #181818;
+  border-bottom: 1px solid var(--Not-BG, #2d2d2d);
+}
+
+.Speakers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-image: url("../public/assets/Frame-49.png"); /* Adjust the path based on your folder structure */
+  z-index: 2;
+  background-position-x: 605px;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+  background-size: 100% auto contain; /* Adjust to cover or auto based on your needs */
+  padding: 20px;
+}
+.Speaker-heading {
+  font-family: saol;
+  color: #fff;
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 123.55px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  margin-top: 56px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+/* Backgrounds */
+.speakermain-container {
+  width: 100%;
+  height: 2565px;
+  background-color: #181818;
+  color: #fff;
+
+  background-image: url("../public/assets/Frame-49.png"),
+    url("../public/assets/Vector1.png"); /* Adjust the path based on your folder structure */
+
+  background-position: 605px -220px, 0px -200px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto contain, 100% auto contain; /* Adjust to cover or auto based on your needs */
+  padding: 20px, 20px;
+  z-index: -10;
+}
+
+.content-box {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #151515; /* Light background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 420px; /* Limits the box width */
+  /* Centers the box and adds space */
+  text-align: center; /* Centers the content */
+  height: 240px;
+  border: 0.5px solid var(--Not-BG, rgba(45, 45, 45, 1));
+}
+
+.content-box h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-family: Space Grotesk;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 45.94px;
+  letter-spacing: -0.01em;
+
+  color: #fff; /* Darker heading color */
+}
+
+.content-box p {
+  color: #fff;
+  font-family: Space Grotesk;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25.52px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  opacity: 0.75;
+}
+
+/* Star */
+
+.star {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 50%; /* Makes it circular */
+
+  /* clip-path: polygon(
+    48% 0%,
+    52% 0%,
+    52% 45%,
+    100% 45%,
+    100% 55%,
+    52% 55%,
+    52% 100%,
+    48% 100%,
+    48% 55%,
+    0% 55%,
+    0% 45%,
+    48% 45%
+  ); */
+
+  /* Glowing effect */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4),
+    0 0 80px rgba(255, 255, 255, 0.2);
+
+  /* Optional: if you want some animation for the glow */
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+/* Animation for a pulsating glow */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+      0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4),
+      0 0 80px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.8),
+      0 0 60px rgba(255, 255, 255, 0.6), 0 0 80px rgba(255, 255, 255, 0.4),
+      0 0 100px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+      0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4),
+      0 0 80px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.profile-card {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+}
+
+.profile-img-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+  z-index: 2;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* .wave-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../public/assets/wave.png") no-repeat;
+  background-position: 15px 15px;
+  background-repeat: no-repeat;
+  background-size: cover; /* Adjust to cover or auto based on your needs */
+/* padding: 0 0;
+  z-index: 1;
+} */
